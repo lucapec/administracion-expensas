@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/administracion-expensas/static/css/main.c34a1858.css",
-    "main.js": "/administracion-expensas/static/js/main.c03742f3.js",
+    "main.js": "/administracion-expensas/static/js/main.73e5dff6.js",
     "index.html": "/administracion-expensas/index.html",
     "main.c34a1858.css.map": "/administracion-expensas/static/css/main.c34a1858.css.map",
-    "main.c03742f3.js.map": "/administracion-expensas/static/js/main.c03742f3.js.map"
+    "main.73e5dff6.js.map": "/administracion-expensas/static/js/main.73e5dff6.js.map"
   },
   "entrypoints": [
     "static/css/main.c34a1858.css",
-    "static/js/main.c03742f3.js"
+    "static/js/main.73e5dff6.js"
   ]
 }
