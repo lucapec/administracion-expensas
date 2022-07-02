@@ -1,0 +1,15 @@
+.Container-dark{
+    background-color: #24303c;
+    color: white;
+}
+
+.Container-dark button {
+    background-color: rgb(192, 191, 191);
+    color: black;
+    font-weight: bold;
+}
+
+.Container-light{
+    background-color: rgb(216, 216, 216);
+}
+
