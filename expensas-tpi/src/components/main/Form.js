@@ -9,13 +9,11 @@ export const Form = () => {
   const [cellphone, setCellphone] = useState("");
   const [consult, setConsult] = useState([]);
 
-
   const errorName = validName(name);
   const errorSurname = validSurname(surname);
   const errorCellphone = validCellphone(cellphone);
   const errorEmail = valiEmail(email);
   const errorConsulta = valiConsulta(consult);
-
 
   return (
     <div className="login-form">
@@ -23,10 +21,10 @@ export const Form = () => {
       <form
         onSubmit={(ev) => {
           ev.preventDefault();
-          setName('');
-          setSurname('');
-          setEmail('');
-          setCellphone('');
+          setName("");
+          setSurname("");
+          setEmail("");
+          setCellphone("");
           setConsult([]);
         }}
       >
@@ -62,12 +60,21 @@ export const Form = () => {
         </div>
         <div className="login-form-items">
           <label>Ingrese su Email</label>
-          <input value={email} onChange={(ev) => setEmail(ev.target.value)} type="email" required />
+          <input
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+            type="email"
+            required
+          />
           <p className="errores-consult">{errorEmail}</p>
         </div>
         <div className="login-form-items">
           <label>Ingrese su consulta</label>
-          <input value={consult} onChange={(ev) => setConsult(ev.target.value)} required/>
+          <input
+            value={consult}
+            onChange={(ev) => setConsult(ev.target.value)}
+            required
+          />
         </div>
         <p className="errores-consult">{errorConsulta}</p>
         <div className="login-form-items">
@@ -80,21 +87,26 @@ export const Form = () => {
   );
 };
 
- const validName = (name) => {
-    if (name.length < 2 && name.length > 0) return "El nombre debe contener mas de 2 letras"; };
+const validName = (name) => {
+  if (name.length < 2 && name.length > 0)
+    return "El nombre debe contener mas de 2 letras";
+};
 
 const validSurname = (surname) => {
-  if (surname.length < 3 && surname.length > 0) return "El apellido debe contener mas de 3 letras";
+  if (surname.length < 3 && surname.length > 0)
+    return "El apellido debe contener mas de 3 letras";
 };
 
 const validCellphone = (cellphone) => {
-  if (isNaN(cellphone) || (cellphone.length < 6 && cellphone.length > 1)) return "Numero de telefono invalido";
+  if (isNaN(cellphone) || (cellphone.length < 6 && cellphone.length > 1))
+    return "Numero de telefono invalido";
 };
- const valiEmail = (email) => {
-   if (!email.includes('@') && email.length > 1 ) return "Email incorrecto";
- }
+const valiEmail = (email) => {
+  if (!email.includes("@") && email.length > 1) return "Email incorrecto";
+};
 
 const valiConsulta = (consult) => {
-  if (consult.length < 10 && consult.length > 0) return "Ingrese una consulta mas larga";
-}
+  if (consult.length < 10 && consult.length > 0)
+    return "Ingrese una consulta mas larga";
+};
 export default Form;

@@ -16,8 +16,8 @@ const main = () => {
           privados.
         </p>
       </div>
-        <div className="form-section">
-      <Form />
+      <div className="form-section">
+        <Form />
       </div>
     </div>
   );

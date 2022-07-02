@@ -64,14 +64,9 @@ form {
   margin-bottom: 20px;
 }
 
-
-
- @media screen and (max-width: 850px) {
-
+@media screen and (max-width: 850px) {
   .login-form {
     width: 80%;
     height: 100%;
-   
   }
-
-} 
+}

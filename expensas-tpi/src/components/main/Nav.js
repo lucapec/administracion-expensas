@@ -14,15 +14,11 @@ const Nav = () => {
   return (
     <div>
       <BrowserRouter>
-        <Routes>{/*   <Route path="/login" element={<Login />} />  */}</Routes>
 
         <nav className="nav-bar">
           <h1>AE</h1>
 
           <div className="buttons">
-            {/*      <button onClick={() => setMostrarComponente(!mostrarComponente)}>
-              INICIAR SESION
-            </button>  */}
             {!auth.currentUser && (
               <>
                 <NavLink to="/login">
