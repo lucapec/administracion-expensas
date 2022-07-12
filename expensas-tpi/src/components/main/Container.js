@@ -7,6 +7,7 @@ import { DarkModeContext } from "../context/DarkModeContext";
 import { useAuth } from "../context/AuthContextProvider";
 
 import Userlogged from "./Userlogged";
+import AdminLogged from "./AdminLogged";
 
 const Container = () => {
   const auth = useAuth();

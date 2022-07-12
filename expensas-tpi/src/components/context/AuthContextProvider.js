@@ -6,7 +6,8 @@ const initialState = {
     waitingLogin: false,
     loginError: '',
     edificioUser : '',
-    deudaUser : ''
+    deudaUser : '',
+    sudo: ''
 
 };
 
@@ -27,9 +28,10 @@ export default function AuthContextProvider ({ children }) {
             }
             )
             .then ((body) => {
-                const user = body.find(x=>x.name === nameParam && x.password === password)
+                const user = body.find(x=>x.name === nameParam && x.password === password) 
                 if (user) {
                     dispatch({ type: 'setCurrentUser', currentUser: user, error: 'Usuario correcto'});
+                   
                 }  else {
                 dispatch({ type: 'setError', error: 'Usuario inexistente.' });
                 alert("Usuario incorrecto");

@@ -1,6 +1,7 @@
 {
   "user": [
     {
+      "sudo": "admin",
       "id": 1,
       "name": "Matias",
       "password": "1234",
@@ -9,6 +10,7 @@
       "mes": "mayo"
     },
     {
+      "sudo": "user",
       "id": 2,
       "name": "Luca",
       "password": "4321",
