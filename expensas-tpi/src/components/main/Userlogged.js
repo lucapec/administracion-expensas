@@ -114,14 +114,19 @@ function Userlogged() {
           >
             Insertar
           </button>
+          
           <div>
             <Table striped bordered hover variant="dark">
               <thead>
                 <tr>
+                  <th>Sudo</th>
                   <th>Id</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
-                  <th colSpan={2}>Deuda</th>
+                  <th>Dirección</th>
+                  <th>Deuda</th>
+                  <th>Mes</th>
+                  <th>Acciones</th>
                 </tr>
               </thead>
               {users.map((x) => (
