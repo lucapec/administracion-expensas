@@ -1,9 +1,24 @@
 import { useAuthDispatch, useAuth } from "../context/AuthContextProvider";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./UserLogged.css";
 
 function Userlogged() {
   const auth = useAuth();
+  
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/user')
+      .then((response) => {
+        return response.json()
+      })
+      .then((body) =>{
+        const users = body.filter((x) => (x.sudo == 'user'))
+        setUsers(users);
+        console.log(users); 
+    })}, 
+    []);
+
+
   return (
     <div className="userloged">
       {auth.currentUser.sudo == 'user' && (
@@ -25,26 +40,20 @@ function Userlogged() {
           </div>
         </div>
       </div>
-)}
-{auth.currentUser.sudo == 'admin' && (
-  fetch('http://localhost:5000/user')
- .then((response) => {
-  return response.json()
- })
- .then((body) =>{
-  const users = body.filter((x => x.sudo == 'user').map((x) => (
+      )}
+      {auth.currentUser.sudo == 'admin' && (
+        <div>
+          {users.map(x => (
+            <div>
+              {x.name}
+            </div>
+          ))}
+        </div>
+  )}
 
-  );
-  console.log(users);
-  return users;
-}
- ,<p>{users}</p>))
-};
-
- 
-
-    </div>
-  );
-}
+  </div>
+  )
+      }
+    
 
 export default Userlogged;
