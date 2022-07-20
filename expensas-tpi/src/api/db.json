@@ -4,6 +4,7 @@
       "sudo": "admin",
       "id": 1,
       "name": "Matias",
+      "lastname": "Sauan",
       "password": "1234",
       "edificio": "Buenos Aires 1500",
       "valor": "3500",
@@ -13,6 +14,38 @@
       "sudo": "user",
       "id": 2,
       "name": "Luca",
+      "lastname": "FAFA",
+      "password": "4321",
+      "edificio": "Alem 900",
+      "valor": "5000",
+      "mes": "junio"
+    },
+
+    {
+      "sudo": "user",
+      "id": 3,
+      "name": "Martin",
+      "lastname": "FAFO",
+      "password": "5678",
+      "edificio": "Alem 1000",
+      "valor": "5400",
+      "mes": "junio"
+    },
+    {
+      "sudo": "user",
+      "id": 2,
+      "name": "Luca",
+      "lastname": "FAFA",
+      "password": "4321",
+      "edificio": "Alem 900",
+      "valor": "5000",
+      "mes": "junio"
+    },
+    {
+      "sudo": "user",
+      "id": 2,
+      "name": "Luca",
+      "lastname": "FAFA",
       "password": "4321",
       "edificio": "Alem 900",
       "valor": "5000",
