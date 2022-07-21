@@ -28,7 +28,7 @@ export default function AuthContextProvider ({ children }) {
             }
             )
             .then ((body) => {
-                const user = body.find(x=>x.name === nameParam && x.password === password) 
+                const user = body.find(x=>x.name.toLowerCase() === nameParam.toLowerCase() && x.password === password) 
                 if (user) {
                     dispatch({ type: 'setCurrentUser', currentUser: user, error: 'Usuario correcto'});
                    
