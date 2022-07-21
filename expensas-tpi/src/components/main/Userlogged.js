@@ -14,11 +14,17 @@ function Userlogged() {
         return response.json();
       })
       .then((body) => {
-        const users = body.filter((x) => x.sudo == "user");
+        const users = body.filter((x) => x);
         setUsers(users);
         console.log(users);
       });
   }, []);
+
+  const changeId = ((users) => {
+    const sumando = users.id + 1;
+    console.log(users.id)
+    return sumando;
+  })
 
   const [modalEditar, setModalEditar] = useState(false);
   const [modalEliminar, setModalEliminar] = useState(false);
@@ -108,6 +114,7 @@ function Userlogged() {
       )}
       {auth.currentUser.sudo == "admin" && (
         <div>
+          <h1>Bienvenido {auth.currentUser.name}</h1>
           <button
             className="btn btn-success"
             onClick={() => abrirModalInsertar()}
@@ -115,7 +122,7 @@ function Userlogged() {
             Insertar
           </button>
           
-          <div>
+          <div className="table">
             <Table striped bordered hover variant="dark">
               <thead>
                 <tr>
@@ -179,6 +186,7 @@ function Userlogged() {
                   <label>Id</label>
                   <input
                     className="form-control"
+                    readOnly
                     type="text"
                     name="id"
                     value={userSelected && userSelected.id}
@@ -243,7 +251,7 @@ function Userlogged() {
                   <br />
                   <br />
 
-                  <label>mes</label>
+                  <label>Mes</label>
                   <input
                     className="form-control"
                     type="text"
@@ -293,26 +301,17 @@ function Userlogged() {
               </ModalHeader>
               <ModalBody>
                 <div className="form-group">
-                  <label>ID</label>
-                  <input
-                    className="form-control"
-                    readOnly
-                    type="text"
-                    name="id"
-                    value={users.id + 1}
-                  />
                   <br />
 
                   <label>Sudo</label>
                   <input
                     className="form-control"
-                    readOnly
                     type="text"
                     name="sudo"
                     value={userSelected ? userSelected.sudo : ""}
                     onChange={handleChange}
                   />
-                  <br />
+                 {/*  <br />
 
                   <label>Id</label>
                   <input
@@ -322,7 +321,7 @@ function Userlogged() {
                     value={userSelected ? userSelected.id : ""}
                     onChange={handleChange}
                   />
-                  <br />
+                  <br /> */}
 
                   <br />
 

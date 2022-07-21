@@ -1,8 +1,8 @@
 .userloged {
   margin-top: 10%;
   height: 100vh;
-  width: 60%;
-  margin-left: 35%;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .container {
@@ -43,7 +43,6 @@
   color: white;
   font-size: 14px;
   margin-right: 7%;
-  float: right;
   width: 30%;
   height: 50px;
 }

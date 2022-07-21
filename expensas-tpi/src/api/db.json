@@ -6,15 +6,15 @@
       "name": "Matias",
       "lastname": "Sauan",
       "password": "1234",
-      "edificio": "Buenos Aires 1500",
-      "valor": "3500",
-      "mes": "mayo"
+      "edificio": "",
+      "valor": "",
+      "mes": ""
     },
     {
       "sudo": "user",
       "id": 2,
       "name": "Luca",
-      "lastname": "FAFA",
+      "lastname": "Pecorelli",
       "password": "4321",
       "edificio": "Alem 900",
       "valor": "5000",
@@ -25,31 +25,31 @@
       "sudo": "user",
       "id": 3,
       "name": "Martin",
-      "lastname": "FAFO",
+      "lastname": "Palermo",
       "password": "5678",
-      "edificio": "Alem 1000",
+      "edificio": "Pasco 1000",
       "valor": "5400",
       "mes": "junio"
     },
     {
       "sudo": "user",
       "id": 4,
-      "name": "Luca",
-      "lastname": "FAFA",
+      "name": "Juan Roman",
+      "lastname": "Riquelme",
       "password": "4321",
-      "edificio": "Alem 900",
-      "valor": "5000",
+      "edificio": "Francia 800",
+      "valor": "10000",
       "mes": "junio"
     },
     {
       "sudo": "user",
       "id": 5,
-      "name": "Luca",
-      "lastname": "FAFA",
-      "password": "4321",
-      "edificio": "Alem 900",
-      "valor": "5000",
-      "mes": "junio"
+      "name": "Guillermo Barros",
+      "lastname": "Schellotto",
+      "password": "1111",
+      "edificio": "Pellegrini 1900",
+      "valor": "9000",
+      "mes": "mayo"
     }
   ]
 }
