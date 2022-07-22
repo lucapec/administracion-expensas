@@ -55,7 +55,7 @@ export default function AuthContextProvider ({ children }) {
     )
 }
 
-function authReducer(state, action) {
+export function authReducer(state, action) {
     console.log('authReducer', action.type, state, action);
     switch (action.type) {
         case 'setCurrentUser': {

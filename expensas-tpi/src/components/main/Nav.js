@@ -1,16 +1,20 @@
 import React from "react";
 import { NavLink, Route, Routes, BrowserRouter } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Login from "./Login";
+
 import Lightswitch from "./Lightswitch";
 
 import "./Container.css";
 import "./Nav.css";
-import { useAuth } from "../context/AuthContextProvider";
+import { useAuth, useAuthDispatch } from "../context/AuthContextProvider";
 
 const Nav = () => {
   const [mostrarComponente, setMostrarComponente] = useState(true);
+  const dispatch = useAuthDispatch();
   const auth = useAuth();
+ 
+
   return (
     <div>
       <BrowserRouter>
@@ -29,10 +33,20 @@ const Nav = () => {
                       INICIAR SESION
                     </button>
                   ) : (
-                    <Login />
+                   
+                   <Login />
+                    
                   )}
                 </NavLink>
               </>
+            )}
+            {auth.currentUser && (
+              <button onClick={() => {
+                dispatch.logout();
+              }}
+              >
+                CERRAR SESION
+              </button>
             )}
             <Lightswitch />
           </div>
